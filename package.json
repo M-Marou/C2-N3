@@ -4,7 +4,7 @@
   "description": "Le projet permet d'améliorer vos compétences dans un environnement de travail réel.",
   "main": "index.js",
   "scripts": {
-    "scss": "node-sass --watch sass -o css"
+    "scss": "node-sass --watch sass -o css --output-style compressed"
   },
   "repository": {
     "type": "git",
