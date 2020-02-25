@@ -1,0 +1,22 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "Le projet permet d'améliorer vos compétences dans un environnement de travail réel.",
+  "main": "index.js",
+  "scripts": {
+    "scss": "node-sass --watch sass -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/M-Marou/C2-N3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/M-Marou/C2-N3/issues"
+  },
+  "homepage": "https://github.com/M-Marou/C2-N3#readme",
+  "dependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
