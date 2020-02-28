@@ -62,6 +62,7 @@
     display: none; }
 
 .header__image {
+  overflow: hidden;
   padding-top: 120px; }
   .header__image img {
     max-width: 500px; }
