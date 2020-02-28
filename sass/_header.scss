@@ -7,43 +7,127 @@
 .header {
     &__background {
         position: absolute;
-        height: 50vh;
+        height: 65vh;
         width: 50vw;
         background-color: hsl(207, 33%, 95%);
         z-index:-1;
         right: 0;
         border-radius: 0px 0px 0px 50px;
     }
+    &__logo {
+        position: absolute;
+        margin-top: 30px;
+        margin-left: 30px;
+    }
     &__menu {
         position: absolute;
         right: 0;
         top: 0;
-        margin-top: 10px;
-        margin-right:10px ; 
+        text-align: right;
+        margin-top: 40px;
+        margin-right:50px ; 
         &--close {
-            img {
-                position: absolute;
-                cursor: pointer;
-                display: none;
-            }
+            position: absolute;
+            cursor: pointer;
+            display: none;
         }
         &--burger {
+            position: absolute;
             cursor: pointer;
         }
         ul {
             display: none;
             text-align: center;
+            background-color: white;
+            padding: 5px 15px;
+            border-radius: 5px;
+            margin-top: 70px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.20);
+            list-style: none;
             a {
                 text-decoration: none;
                 display: block;
-                margin: 20px 0px;
+                margin: 25px 0px;
+                text-transform: uppercase;
+                font-weight: bold;
+                color: hsl(230, 29%, 20%);
+                span {
+                    color: hsl(231, 7%, 65%);
+                    padding:10px 100px;
+                }
+            }
+            hr {
+                border: 0;
+                border-top: 1.5px solid lightgray;
             }          
         }
         #toggle:checked + ul {
             display: block;
         }
-        #toggle:checked + &--close img {
+        #toggle:checked + &--close {
             display: block;
         }
-    }  
+        #toggle {
+            display: none;
+        }
+    }
+    &__image {
+        padding-top: 120px;
+        img {
+            max-width: 500px;
+        } 
+    }
+    &__content {
+        padding-left: 20px;
+        &--new {
+            font-size: 0.8rem;
+            letter-spacing: 4px;
+            font-weight: bold;
+            color: hsl(231, 7%, 65%);
+            padding-top: 100px;
+            span {
+                color: white;
+                background-color: hsl(230, 29%, 20%);
+                padding: 2px 7px;
+                padding-bottom: 4px;
+                border-radius: 15px;
+                letter-spacing: 0px;
+            }
+        }
+        &--title {
+            text-transform: uppercase;
+            font-size: 2.6rem;
+            padding-top: 24px;
+            font-family: 'Barlow Condensed', ;
+            font-weight: bold;
+            line-height: 40px;
+        }
+        &--p {
+            padding: 20px 0;
+            font-weight: bold;
+            color: hsl(235, 5%, 56%);
+        }
+        &--button {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            color: hsl(231, 7%, 65%);
+            button {
+                background-color: hsl(0, 100%, 68%);
+                border: none;
+                padding: 10px 20px;
+                padding-bottom: 13px;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                text-transform: uppercase;
+                cursor: pointer;
+                margin-right: 10px;
+            }
+            button:hover {
+                background-color: hsl(0, 93%, 71%);
+            }
+        }  
+    }
 }
