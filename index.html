@@ -3,35 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:400,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow:400,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
     <title>Project tracking intro component</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
-    Product Features Pricing Login New Monograph Dashboard Powerful insights
-    into your team Project planning and time tracking for agile teams Schedule a
-    demo to see a live preview
+    <section class="header">
+      <div class="header__background"></div>
+      <div class="header__logo"><img src="images/logo.svg" alt="logo"></div>
+      <div class="header__menu">
+        <label for="toggle" class="header__menu--close"><img src="images/icon-close.svg" alt="hamburger"></label>
+        <label for="toggle" class="header__menu--burger"><img src="images/icon-hamburger.svg" alt="hamburger"></label>
+        <input type="checkbox" id="toggle">
+        <ul>
+          <li><a href="#">Product</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <hr>
+          <li><a href="#"><span>Login</span></a></li>
+        </ul> 
+      </div>
+      <div class="header__container">
+        <div class="header__image"><img src="images/illustration-devices.svg" alt="image"></div>
+        <div class="header__content">
+        <div class="header__content--new"><span>NEW</span> MONOGRAPH DASHBOARD</div>  
+        <div class="header__content--title">Powerful insights into your team</div>  
+        <div class="header__content--p">Project planning and time tracking for agile teams</div>  
+        <div class="header__content--button"><button>Schedule a demo</button> to see a preview</div>
+      </div> 
+      </div>
+    </section>
 
     <footer>
-      <p class="attribution">Coded by <a href="#">Your Name Here</a>.</p>
+      <p class="attribution">Coded by <a href="#">MarOne</a>.</p>
     </footer>
   </body>
 </html>
