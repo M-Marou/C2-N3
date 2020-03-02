@@ -7,7 +7,7 @@
 .header {
     &__background {
         position: absolute;
-        height: 65vh;
+        height: 55vh;
         width: 50vw;
         background-color: hsl(207, 33%, 95%);
         z-index:-1;
@@ -75,7 +75,8 @@
         overflow: hidden;
         padding-top: 120px;
         img {
-            max-width: 500px;
+            width: 130%;
+            // max-width: 500px;
         } 
     }
     &__content {
@@ -100,8 +101,11 @@
             font-size: 2.6rem;
             padding-top: 24px;
             font-family: 'Barlow Condensed', ;
-            font-weight: bold;
+            font-weight: 700;
             line-height: 40px;
+            br {
+                display: none;
+            }
         }
         &--p {
             padding: 20px 0;
@@ -129,6 +133,92 @@
             button:hover {
                 background-color: hsl(0, 93%, 71%);
             }
-        }  
+        } 
     }
 }
+
+@media only screen and (min-width: 900px) {
+    .header__menu {
+        position: absolute;
+        right: 0;
+        top: 0;
+        text-align: right;
+        margin-top: 40px;
+        margin-right:50px ;
+        &--close {
+            display: none;
+        }
+        &--burger {
+            display: none;
+        }
+        ul {
+            display: flex;
+            width: 40vw;
+            background-color: transparent;
+            padding: 0px 0px;
+            border-radius: 5px;
+            margin-top: 20px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.00);
+            list-style: none;
+            justify-content: space-around;
+            a {
+                text-decoration: none;
+                display: inline;
+                margin: 25px 0px;
+                color: hsl(230, 29%, 20%);
+                span {
+                    color: hsl(231, 7%, 65%);
+                    padding:0px 0px;
+                    // border-left:1px solid hsl(231, 7%, 65%); ;
+                }
+            }
+            hr {
+                background-color: lightgray;
+                border-radius: 50%;
+                width: 8px;
+                height: 8px;
+                margin-top: 7px;
+            }          
+        }
+        #toggle:checked + ul {
+            display: none;
+        }
+        #toggle:checked + &--close {
+            display: none;
+        }
+        #toggle {
+            display: none;
+        }
+    }
+   
+    .header__container {
+         display: flex;
+         flex-direction: row-reverse;;
+         width: 100% ;
+    }
+    .header__content {
+        width: 500px;
+    }
+    .header__image {
+        width: 50%;
+        float: none;
+        padding-top: 170px;
+        img {
+            width: 130%;
+            max-width: 936px;
+        } 
+    }
+  }
+
+  @media only screen and (min-width: 500px) {
+    header {
+        &__content {
+            &--p {
+                br {
+                    display: none;
+                }
+            }
+
+        }
+    }
+ }

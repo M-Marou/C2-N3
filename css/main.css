@@ -6,7 +6,7 @@
 
 .header__background {
   position: absolute;
-  height: 65vh;
+  height: 55vh;
   width: 50vw;
   background-color: #eef3f6;
   z-index: -1;
@@ -65,7 +65,7 @@
   overflow: hidden;
   padding-top: 120px; }
   .header__image img {
-    max-width: 500px; }
+    width: 130%; }
 
 .header__content {
   padding-left: 20px; }
@@ -87,8 +87,10 @@
     font-size: 2.6rem;
     padding-top: 24px;
     font-family: "Barlow Condensed";
-    font-weight: bold;
+    font-weight: 700;
     line-height: 40px; }
+    .header__content--title br {
+      display: none; }
   .header__content--p {
     padding: 20px 0;
     font-weight: bold;
@@ -112,6 +114,66 @@
       margin-right: 10px; }
     .header__content--button button:hover {
       background-color: #fa7070; }
+
+@media only screen and (min-width: 900px) {
+  .header__menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: right;
+    margin-top: 40px;
+    margin-right: 50px; }
+    .header__menu--close {
+      display: none; }
+    .header__menu--burger {
+      display: none; }
+    .header__menu ul {
+      display: flex;
+      width: 40vw;
+      background-color: transparent;
+      padding: 0px 0px;
+      border-radius: 5px;
+      margin-top: 20px;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0);
+      list-style: none;
+      justify-content: space-around; }
+      .header__menu ul a {
+        text-decoration: none;
+        display: inline;
+        margin: 25px 0px;
+        color: #242942; }
+        .header__menu ul a span {
+          color: #a0a1ac;
+          padding: 0px 0px; }
+      .header__menu ul hr {
+        background-color: lightgray;
+        border-radius: 50%;
+        width: 8px;
+        height: 8px;
+        margin-top: 7px; }
+    .header__menu #toggle:checked + ul {
+      display: none; }
+    #toggle:checked + .header__menu--close {
+      display: none; }
+    .header__menu #toggle {
+      display: none; }
+  .header__container {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%; }
+  .header__content {
+    width: 500px; }
+  .header__image {
+    width: 50%;
+    float: none;
+    padding-top: 170px; }
+    .header__image img {
+      width: 130%;
+      max-width: 936px; } }
+
+@media only screen and (min-width: 500px) {
+  header__content--p br {
+    display: none; } }
 
 footer {
   padding: 30px; }
